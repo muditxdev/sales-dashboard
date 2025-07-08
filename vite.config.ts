@@ -1,10 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
+const repoName = "sales-dashboard";
+
 export default defineConfig({
   plugins: [react()],
+  base: `/${repoName}/`,
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    exclude: ["lucide-react"],
   },
 });
