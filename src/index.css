@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* React Grid Layout Styles */
+.react-grid-layout {
+  position: relative;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, width, height;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform, width, height;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  cursor: se-resize;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2px;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #3b82f6;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: relative;
+}
+
+.react-grid-item:hover > .react-resizable-handle::after {
+  opacity: 1;
+}
+
+/* Add 6 resize points around the widget */
+.react-grid-item > .react-resizable-handle::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 2px dashed transparent;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+  pointer-events: none;
+}
+
+.react-grid-item:hover > .react-resizable-handle::before {
+  border-color: #3b82f6;
+}
+
+/* Resize points */
+.react-grid-item:hover::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 0% 0%, #3b82f6 3px, transparent 3px),
+    radial-gradient(circle at 50% 0%, #3b82f6 3px, transparent 3px),
+    radial-gradient(circle at 100% 0%, #3b82f6 3px, transparent 3px),
+    radial-gradient(circle at 0% 50%, #3b82f6 3px, transparent 3px),
+    radial-gradient(circle at 100% 50%, #3b82f6 3px, transparent 3px),
+    radial-gradient(circle at 0% 100%, #3b82f6 3px, transparent 3px),
+    radial-gradient(circle at 50% 100%, #3b82f6 3px, transparent 3px),
+    radial-gradient(circle at 100% 100%, #3b82f6 3px, transparent 3px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: 
+    top left, top center, top right,
+    center left, center right,
+    bottom left, bottom center, bottom right;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: rgb(59, 130, 246);
+  opacity: 0.2;
+  transition-duration: 100ms;
+  z-index: 2;
+  user-select: none;
+  border-radius: 8px;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.react-grid-item.react-resizable-resizing {
+  transition: none;
+  z-index: 3;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.widget-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Highcharts overrides */
+.highcharts-container {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.highcharts-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.highcharts-legend-item text {
+  font-size: 12px !important;
+  fill: #6b7280 !important;
+}
+
+.highcharts-axis-labels text {
+  font-size: 11px !important;
+  fill: #6b7280 !important;
+}
+
+.highcharts-tooltip-box {
+  fill: rgba(0, 0, 0, 0.8) !important;
+  stroke: none !important;
+}
+
+.highcharts-tooltip text {
+  fill: white !important;
+}
