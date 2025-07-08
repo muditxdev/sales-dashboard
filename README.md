@@ -2,8 +2,6 @@
 
 A beautiful, modern sales dashboard built with React 18, TypeScript, and Vite. Features drag-and-drop widgets, interactive charts, and a responsive design perfect for sales teams and analytics.
 
-![SalesPro Dashboard](https://via.placeholder.com/800x400/2563eb/ffffff?text=SalesPro+Dashboard)
-
 ## ✨ Features
 
 - **🎯 Interactive Dashboard**: Drag-and-drop widget layout with real-time resizing
@@ -148,7 +146,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Mudit Jain**
-- GitHub: [@muditjain](https://github.com/muditjain)
+- GitHub: [@muditjain](https://github.com/muditxdev)
 
 ## 🙏 Acknowledgments
 
@@ -160,7 +158,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Demo
 
-Visit the live demo: [SalesPro Dashboard Demo](https://your-demo-url.com)
+Visit the live demo: [SalesPro Dashboard Demo](https://muditxdev.github.io/sales-dashboard/)
 
 ---
 
