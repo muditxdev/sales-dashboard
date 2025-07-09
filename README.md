@@ -146,7 +146,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Mudit Jain**
-- GitHub: [@muditjain](https://github.com/muditxdev)
+- GitHub: [@muditxdev](https://github.com/muditxdev)
 
 ## 🙏 Acknowledgments
 
@@ -155,10 +155,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 - [Lucide](https://lucide.dev/) - Icon library
 - [Vite](https://vitejs.dev/) - Build tool
-
-## 📊 Demo
-
-Visit the live demo: [SalesPro Dashboard Demo](https://muditxdev.github.io/sales-dashboard/)
 
 ---
 
